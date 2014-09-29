@@ -1,22 +1,36 @@
-/* make all of the info boxes the same height
+/* make all of the info boxes the same height, when not stacked
 from http://stackoverflow.com/a/22892773 */
-.row-height-equal, .row-height-equal > div[class*='col-'], .panel-gmap, .panel-gmap iframe {
+
+@media (min-width: 992px) {
+  .row-height-equal, .row-height-equal > div[class*='col-'] {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
-    flex:1 0 auto;
-}
+    flex: 1 0 auto;
+  }
 
-/* push the more info buttons to the bottom of the info box */
-.row-height-equal .btn {
+  /* push the more info buttons to the bottom of the info box */
+
+  .row-height-equal .btn {
     position: absolute;
     bottom: 35px;
-}
-.row-height-equal .panel-body {
+  }
+  
+  .row-height-equal .panel-body {
     margin-bottom: 35px;
+  }
+}
+
+
+/* make the google map fill its box all the time */
+.panel-gmap, .panel-gmap iframe {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1 0 auto;
 }
 
 /* make the carousel taller */
 header.carousel {
-    height: 70%;
+  height: 70%;
 }
