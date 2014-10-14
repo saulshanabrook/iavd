@@ -1,4 +1,13 @@
 {% extends "_base.html" %}
+{% block js %}
+    {{ super() }}
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+{% endblock js %}
 {% block body %}
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
@@ -85,12 +94,3 @@
     </div>
     <!-- /.container -->
 {% endblock %}
-{% block js %}
-    {{ super() }}
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
-{% endblock js %}
