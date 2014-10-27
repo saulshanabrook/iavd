@@ -1,0 +1,61 @@
+/* so that when click on links to people, will account for navbar when scrolling */
+
+/* the header is 50px normally, so they should scroll down so they are 15px, from
+the top of the screen */
+div[id] {
+    padding-top: 75px;
+    margin-top: -75px;
+}
+/* however within a certain width the header becomes twice as big, at 100px */
+@media (min-width: 768px) and (max-width: 1200px) {
+    div[id] {
+        padding-top: 125px;
+        margin-top: -125px;
+    }
+}
+
+#sidebar.affix {
+    top: 75px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    #sidebar.affix {
+        top: 125px;
+    }
+}
+
+#sidebar.affix-top {
+    white-space: nowrap;
+}
+
+/* sidebar */
+.bs-docs-sidebar {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* all links */
+.bs-docs-sidebar .nav>li>a {
+    color: #000000;
+    border-left: 2px solid transparent;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+/* active & hover links */
+.bs-docs-sidebar .nav>.active>a,
+.bs-docs-sidebar .nav>li>a:hover,
+.bs-docs-sidebar .nav>li>a:focus {
+    color: #000000;
+    text-decoration: none;
+    background-color: transparent;
+    border-left-color: #000000;
+}
+/* all active links */
+.bs-docs-sidebar .nav>.active>a,
+.bs-docs-sidebar .nav>.active:hover>a,
+.bs-docs-sidebar .nav>.active:focus>a {
+    font-weight: 700;
+}
