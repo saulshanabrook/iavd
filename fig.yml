@@ -1,0 +1,12 @@
+generate:
+  build: .
+  volumes:
+    - .:/usr/src/app/
+server:
+  image: python:2
+  command: python -m SimpleHTTPServer 8000
+  ports:
+    - "8000:8000"
+  working_dir: /code/
+  volumes:
+    - .:/code/

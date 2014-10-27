@@ -12,6 +12,9 @@ the header.
 
 ### How to run the HTML generator
 ```bash
+// Using Fig
+$ fig up -d
+$ open "$(boot2docker --ip):8080"
 
 // Using Docker
 $ docker build -t iavd .

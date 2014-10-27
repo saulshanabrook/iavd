@@ -1,13 +1,22 @@
 {% extends "_base.html" %}
+
 {% block js %}
     {{ super() }}
-    <!-- Script to Activate the Carousel -->
+    <script src="static/js/jquery-1.11.0.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
     <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
     </script>
 {% endblock js %}
+
+{% block css %}
+    {{ super() }}
+    <link href="static/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/index.css" rel="stylesheet" type="text/css">
+{% endblock css %}
+
 {% block body %}
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
@@ -22,7 +31,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('img/slider/Bat.jpg');"></div>
+                <div class="fill" style="background-image:url('static/img/index/Bat.jpg');"></div>
                 <!--
                 <div class="carousel-caption">
                     <h2>Caption 1</h2>
@@ -30,13 +39,13 @@
                 -->
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('img/slider/Elwel.jpg');"></div>
+                <div class="fill" style="background-image:url('static/img/index/Elwel.jpg');"></div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('img/slider/School.jpg');"></div>
+                <div class="fill" style="background-image:url('static/img/index/School.jpg');"></div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('img/slider/Toliksleda2.jpg');"></div>
+                <div class="fill" style="background-image:url('static/img/index/Toliksleda2.jpg');"></div>
             </div>
         </div>
 
